@@ -2,6 +2,12 @@ name: pyexcel
 organisation: pyexcel
 releases:
 - changes:
+  - action: Added
+    details:
+    - "multi-level material requirements planning via pyexcel.mrp.build_material_plan: shared components merge gross demand and deduct stock once, planned quantities round up to each material's lot size, lower-level demand follows actual planned output, and results are returned as a native pyexcel.Book with gross demand, net demand, planned production/purchase quantity, projected balance and parent-child demand details; invalid references, duplicate data and circular BOMs raise a single batched MRPError without producing a partial plan"
+  version: 0.7.8
+  date: tbd
+- changes:
   - action: Fixed
     details:
     - "`#310`: fix broken indentation in iget_records memory-reduction patch"
